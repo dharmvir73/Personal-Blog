@@ -1,7 +1,7 @@
 const BlogLists = ({ title, date, tag, description }) => {
   return (
     <article className="flex flex-col gap-1 pt-[80px] ">
-      <h1 className="text-[32px] font-bold text-white cursor-pointer decoration-[#00AAFF] decoration-6 underline-offset-0 hover:underline">
+      <h1 className="text-[32px] font-bold text-white cursor-pointer decoration-[#00AAFF] decoration-6 underline-offset-1 hover:underline">
         {title}
       </h1>
       <h2 className="text-slate-300 ">{date}</h2>
