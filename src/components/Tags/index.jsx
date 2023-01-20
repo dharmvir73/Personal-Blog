@@ -6,7 +6,7 @@ const Tags = () => {
           <div className="px-2 py-1 cursor-pointer hover:bg-[#00aaff5d] ">
             JavaScript
           </div>
-          <div className="bg-slate-300 text-[#111827] h-[100%] px-2 py-1 ">
+          <div className="bg-slate-300 text-[#111827] h-[100%] px-2 py-1 rounded-r-sm">
             21
           </div>
         </div>
@@ -15,7 +15,7 @@ const Tags = () => {
           <div className="px-2 py-1 cursor-pointer hover:bg-[#00aaff5d]">
             React.JS
           </div>
-          <div className="bg-slate-300 text-[#111827] h-[100%] px-2 py-1 ">
+          <div className="bg-slate-300 text-[#111827] h-[100%] px-2 py-1 rounded-r-sm">
             50
           </div>
         </div>
@@ -24,7 +24,7 @@ const Tags = () => {
           <div className="px-2 py-1 cursor-pointer hover:bg-[#00aaff5d]">
             CSS
           </div>
-          <div className="bg-slate-300 text-[#111827] h-[100%] px-2 py-1 ">
+          <div className="bg-slate-300 text-[#111827] h-[100%] px-2 py-1 rounded-r-sm">
             12
           </div>
         </div>
@@ -33,7 +33,7 @@ const Tags = () => {
           <div className="px-2 py-1 cursor-pointer hover:bg-[#00aaff5d]">
             MongoDB
           </div>
-          <div className="bg-slate-300 text-[#111827] h-[100%] px-2 py-1 ">
+          <div className="bg-slate-300 text-[#111827] h-[100%] px-2 py-1 rounded-r-sm">
             10
           </div>
         </div>

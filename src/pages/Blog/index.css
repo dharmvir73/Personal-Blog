@@ -1,0 +1,32 @@
+#article > h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+  font-weight: 400;
+}
+#article > h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+#article > h3 {
+  font-size: 1.75rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+#article > h4 {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+#article > h5 {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+#article > h6 {
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}

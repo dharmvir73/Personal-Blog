@@ -1,4 +1,4 @@
-const SearchBar = () => {
+const SearchBar = ({ handleChange, query }) => {
   return (
     <div className="flex flex-col gap-1 justify-center bg-[#111827]">
       <label
@@ -8,6 +8,9 @@ const SearchBar = () => {
         Search
       </label>
       <input
+        type="text"
+        value={query}
+        onChange={handleChange}
         id="search"
         name="Search"
         placeholder=""

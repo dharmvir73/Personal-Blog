@@ -1,15 +1,15 @@
-import BlogList from "./components/BlogList";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Blog from "./pages/Blog";
 import Nav from "./components/Nav";
-import SearchBar from "./components/SearchBar";
-import Tags from "./components/Tags";
-
 function App() {
   return (
     <div className="max-w-[1080px] mx-auto bg-[#111827]">
       <Nav />
-      <SearchBar />
-      <Tags />
-      <BlogList />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog/:id" element={<Blog />} />
+      </Routes>
     </div>
   );
 }

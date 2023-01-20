@@ -1,51 +1,18 @@
 import BlogLists from "./BlogLists";
 
-const BlogList = () => {
+const BlogList = ({ data, error, loading }) => {
+  if (loading) return <p className="text-white">Loading...</p>;
+  if (error) return <p>Error:(</p>;
+
+  const articles = data;
+
   return (
     <div className="flex flex-col ">
       <div className="w-[90%] self-center">
-        <BlogLists
-          title="Every Important HTTP Status Code Explained"
-          date="December 12, 2022"
-          tag="Prefrences"
-          description=" HTTP status codes are vital to creating an API and in this article I
-          will explain all the important HTTP status codes and when to use them."
-        />
-        <BlogLists
-          title="Every Important HTTP Status Code Explained"
-          date="December 12, 2022"
-          tag="Prefrences"
-          description=" HTTP status codes are vital to creating an API and in this article I
-          will explain all the important HTTP status codes and when to use them."
-        />
-        <BlogLists
-          title="Every Important HTTP Status Code Explained"
-          date="December 12, 2022"
-          tag="Prefrences"
-          description=" HTTP status codes are vital to creating an API and in this article I
-          will explain all the important HTTP status codes and when to use them."
-        />
-        <BlogLists
-          title="Every Important HTTP Status Code Explained"
-          date="December 12, 2022"
-          tag="Prefrences"
-          description=" HTTP status codes are vital to creating an API and in this article I
-          will explain all the important HTTP status codes and when to use them."
-        />
-        <BlogLists
-          title="Every Important HTTP Status Code Explained"
-          date="December 12, 2022"
-          tag="Prefrences"
-          description=" HTTP status codes are vital to creating an API and in this article I
-          will explain all the important HTTP status codes and when to use them."
-        />
-        <BlogLists
-          title="Every Important HTTP Status Code Explained"
-          date="December 12, 2022"
-          tag="Prefrences"
-          description=" HTTP status codes are vital to creating an API and in this article I
-          will explain all the important HTTP status codes and when to use them."
-        />
+        {articles &&
+          articles.map((article) => (
+            <BlogLists key={article.id} blog={article} />
+          ))}
       </div>
     </div>
   );
