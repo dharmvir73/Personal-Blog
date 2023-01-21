@@ -5,10 +5,11 @@ import useFetch from "../../hooks/useFetch";
 import { useEffect, useState } from "react";
 
 const Home = () => {
-  const { data, error, loading } = useFetch("http://localhost:1337/api/blogs/");
+  const { data, error, loading } = useFetch("https://blog-strapi-4h73.onrender.com/api/blogs/");
+
+  const addElements = data.data;
 
   const [recivedData, setRecivedData] = useState([]);
-  const addElements = data.data;
 
   useEffect(() => {
     if (!loading && data) {

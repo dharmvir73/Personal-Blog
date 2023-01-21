@@ -7,7 +7,7 @@ const Blog = () => {
   const { id } = useParams();
 
   const { data, error, loading } = useFetch(
-    `http://localhost:1337/api/blogs/${id}`
+    `https://blog-strapi-4h73.onrender.com/api/blogs/${id}`
   );
 
   const article = data.data;
