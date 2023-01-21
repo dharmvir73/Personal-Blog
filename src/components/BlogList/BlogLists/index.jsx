@@ -20,7 +20,7 @@ const BlogLists = ({
       return result.join(" ");
     }
   };
-  console.log(addSpaces(title));
+
   return (
     <article className="flex flex-col gap-1 pt-[80px] ">
       <Link to={`blog/${id}`}>

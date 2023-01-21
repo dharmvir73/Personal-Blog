@@ -17,13 +17,28 @@ const Blog = () => {
   if (loading) return <p className="text-white">Loading...</p>;
   if (error) return <p>Error:(</p>;
 
+  const addSpaces = (str) => {
+    var viewport_width = window.innerWidth;
+    if (viewport_width > 640) {
+      return str;
+    }
+
+    if (viewport_width < 640) {
+      let result = [];
+      for (let i = 0; i < str.length; i += 19) {
+        result.push(str.slice(i, i + 19));
+      }
+      return result.join(" ");
+    }
+  };
+
   return (
     <>
       {article && (
         <div className="max-w-[1080px] mx-auto bg-[#111827] p-5">
           <article className="flex flex-col gap-1 pt-[20px] ">
             <h1 className="text-[2.5rem] font-bold text-white">
-              {article.attributes.title}
+              {addSpaces(article.attributes.title)}
             </h1>
             <h2 className="text-slate-300 ">{article.attributes.date}</h2>
             <label className=" w-[fit-content] px-[8px] py-[2px] text-white text-lg border-[1px] rounded-[5px] border-white">
