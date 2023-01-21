@@ -6,11 +6,26 @@ const BlogLists = ({
     attributes: { title, date, tags, description },
   },
 }) => {
+  const addSpaces = (str) => {
+    var viewport_width = window.innerWidth;
+    if (viewport_width > 640) {
+      return str;
+    }
+
+    if (viewport_width < 640) {
+      let result = [];
+      for (let i = 0; i < str.length; i += 19) {
+        result.push(str.slice(i, i + 19));
+      }
+      return result.join(" ");
+    }
+  };
+  console.log(addSpaces(title));
   return (
     <article className="flex flex-col gap-1 pt-[80px] ">
       <Link to={`blog/${id}`}>
         <h1 className="text-[32px] font-bold text-white cursor-pointer decoration-[#00AAFF] decoration-6 underline-offset-1 hover:underline">
-          {title}
+          {addSpaces(title)}
         </h1>
       </Link>
       <h2 className="text-slate-300 ">{date}</h2>
@@ -18,7 +33,7 @@ const BlogLists = ({
         {tags}
       </label>
       <article className="text-lg mt-2 text-slate-300 font-medium">
-        {description}
+        {description.substring(0, 200)}
       </article>
       <Link
         to={`blog/${id}`}
