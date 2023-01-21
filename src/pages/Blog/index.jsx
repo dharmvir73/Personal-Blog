@@ -25,8 +25,8 @@ const Blog = () => {
 
     if (viewport_width < 640) {
       let result = [];
-      for (let i = 0; i < str.length; i += 19) {
-        result.push(str.slice(i, i + 19));
+      for (let i = 0; i < str.length; i += 17) {
+        result.push(str.slice(i, i + 17));
       }
       return result.join(" ");
     }
