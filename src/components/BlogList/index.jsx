@@ -1,7 +1,13 @@
+import Loader from "../../common/loader";
 import BlogLists from "./BlogLists";
 
 const BlogList = ({ data, error, loading }) => {
-  if (loading) return <p className="text-white">Loading...</p>;
+  if (loading)
+    return (
+      <div className="flex w-[90%] h-[65vh] justify-center items-center ">
+        <Loader />
+      </div>
+    );
   if (error) return <p>Error:(</p>;
 
   const articles = data;

@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import ReactMarkdown from "react-markdown";
 import "./index.css";
+import Loader from "../../common/loader";
 
 const Blog = () => {
   const { id } = useParams();
@@ -13,9 +14,6 @@ const Blog = () => {
   const article = data.data;
 
   console.log(article);
-
-  if (loading) return <p className="text-white">Loading...</p>;
-  if (error) return <p>Error:(</p>;
 
   const addSpaces = (str) => {
     var viewport_width = window.innerWidth;
@@ -32,9 +30,17 @@ const Blog = () => {
     }
   };
 
+  if (loading)
+    return (
+      <div className="flex w-[90%] h-[80vh] justify-center items-center ">
+        <Loader />
+      </div>
+    );
+  if (error) return <p>Error:(</p>;
+
   return (
     <>
-      {article && (
+      {article.attributes.title && (
         <div className="max-w-[1080px] mx-auto bg-[#111827] p-5">
           <article className="flex flex-col gap-1 pt-[20px] ">
             <h1 className="text-[2.5rem] font-bold text-white">
