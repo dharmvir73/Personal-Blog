@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const TagsList = ({ language, amount }) => {
   return (
     <div className="w-[fit-content] border-[1px] text-white font-semibold flex justify-center items-center rounded-md">
