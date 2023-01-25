@@ -2,10 +2,7 @@ import { useState } from "react";
 
 const TagsList = ({ language, amount }) => {
   return (
-    <div
-      onClick={handleTextSearch}
-      className="w-[fit-content] border-[1px] text-white font-semibold flex justify-center items-center rounded-md"
-    >
+    <div className="w-[fit-content] border-[1px] text-white font-semibold flex justify-center items-center rounded-md">
       <div className="px-2 py-1 cursor-pointer hover:bg-[#00aaff5d] ">
         {language}
       </div>
