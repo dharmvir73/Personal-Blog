@@ -24,7 +24,7 @@ const BlogData = ({ data, loading, error }) => {
 
   if (loading)
     return (
-      <div className="flex w-[90%] h-[80vh] justify-center items-center ">
+      <div className="flex w-[100%] h-[80vh] justify-center">
         <Loader />
       </div>
     );

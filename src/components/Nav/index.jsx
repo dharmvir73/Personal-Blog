@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Switch from "../../common/switch";
+import { Link } from "react-router-dom";
 const Blog = () => {
   const [toggle, setToggle] = useState(false);
 
@@ -10,7 +11,7 @@ const Blog = () => {
     <header className="relative">
       <nav className="bg-[#111827] py-[16px] px-[32px] flex justify-between items-center font-[poppins]">
         <h1 className="text-[2rem] text-[#00AAFF] p-0 font-normal text-center ">
-          Veer Blog
+          <Link to={"/"}>Veer Blog</Link>
         </h1>
         <button
           onClick={handleClick}

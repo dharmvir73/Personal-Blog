@@ -4,7 +4,7 @@ import BlogLists from "./BlogLists";
 const BlogList = ({ data, error, loading }) => {
   if (loading)
     return (
-      <div className="flex w-[90%] h-[65vh] justify-center items-center ">
+      <div className="flex w-[100%] justify-center mt-[30vh]">
         <Loader />
       </div>
     );
